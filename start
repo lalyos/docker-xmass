@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cat > /var/lib/nginx/html/index.html << EOF
+<html>
+<body>
+<h1>$TITLE</h1>
+$BODY
+</body>
+</html>
+EOF
+
+
+nginx -g 'daemon off;'
