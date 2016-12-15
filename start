@@ -2,7 +2,7 @@
 
 cat > /var/lib/nginx/html/index.html << EOF
 <html>
-<body>
+<body bgcolor="$BGCOLOR">
 <h1>$TITLE</h1>
 $BODY
 </body>

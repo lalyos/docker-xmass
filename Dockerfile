@@ -5,6 +5,9 @@ RUN apk add nginx
 RUN apk add bash
 
 RUN mkdir /run/nginx
-RUN echo 'lofasz' > /var/lib/nginx/html/index.html
+ENV BODY welcome
+ENV BGCOLOR lightgreen
+ENV TITLE meri kriszmasz
 
-CMD nginx -g 'daemon off;'
+COPY ./start /
+CMD /start
